@@ -1,0 +1,39 @@
+CS5332 OpenMP Assignment
+-----------------------------------
+john.leidel@ttu.edu
+http://discl.cs.ttu.edu/gitlab/jleidel/cs5332_omp.git
+-----------------------------------
+
+The goal of this assignment is two fold. 
+First, we seek to utilize our lecture notes 
+from lecture 10 and implement a parallel 
+matrix-matrix multiplication kernel.  
+Second, we seek to observe the performance 
+differences depending upon where the directives 
+are implemented.  
+
+The source directory contains several files
+- main.c : driver
+- dgemm_seq.c : sequential DGEMM
+- dgemm_l1.c : L1 parallel solver
+- dgemm_l2.c : L2 parallel solver 
+- dgemm_l3.c : L3 parallel solver
+
+For each of the {L1,L2,L3} parallel solvers, 
+implement the necessary OpenMP clauses on 
+the 1st, 2nd and 3rd loop nests, respectively.
+Make sure that the private and shared data 
+variables are correctly specified.
+
+Execute the sequential version (dgemm_seq) 
+and record the timing and performance.
+Execute each of the parallel versions 
+using 1-8 threads and record the timing 
+and performance for each.  The driver 
+will print the timing and the performance.
+
+Use the included makefile to build the 
+different versions.  (Just type 'make').
+
+-----------------------------------
+EOF
